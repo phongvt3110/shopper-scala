@@ -3,7 +3,7 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.PersonController.index
+GET     /listperson                           controllers.PersonController.index
 
 #+nocsrf
 POST    /person                     controllers.PersonController.addPerson
@@ -14,3 +14,13 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 
 GET     /backend                    controllers.backend.BackendController.index
+GET     /                           controllers.frontend.FrontendController.index
+GET     /error404                   controllers.frontend.FrontendController.error404
+GET     /blog                       controllers.frontend.FrontendController.blog
+GET     /blog-single                       controllers.frontend.FrontendController.blog_single
+GET     /cart                       controllers.frontend.FrontendController.cart
+GET     /checkout                       controllers.frontend.FrontendController.checkout
+GET     /contact-us                       controllers.frontend.FrontendController.contact_us
+GET     /login                       controllers.frontend.FrontendController.login
+GET     /product-details                       controllers.frontend.FrontendController.product_details
+GET     /shop                       controllers.frontend.FrontendController.shop

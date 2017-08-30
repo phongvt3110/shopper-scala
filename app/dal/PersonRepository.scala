@@ -78,12 +78,12 @@ class PersonRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(impl
     people.result
   }
 
-  def get(id: Int): Future[Option[Person]] = {
-    db.run(people.filter(_.id == id).result.headOption)
+  def get(id: Long): Future[Option[Person]] = {
+    db.run(people.filter(_.id === id).result.headOption)
   }
 
-  def delete(id: Int): Future[Int] = {
-    dbConfig.db.run(people.filter(v => v.id == id).delete)
+  def delete(id: Long): Future[Int] = {
+    dbConfig.db.run(people.filter(v => v.id === id).delete)
   }
 
   def add(user: Person): Future[String] = {
