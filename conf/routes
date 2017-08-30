@@ -14,6 +14,8 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 
 GET     /backend                    controllers.backend.BackendController.index
+GET     /backend/dashboard2                    controllers.backend.BackendController.dashboard2
+GET     /backend/pages/widgets                    controllers.backend.BackendController.widgets
 GET     /                           controllers.frontend.FrontendController.index
 GET     /error404                   controllers.frontend.FrontendController.error404
 GET     /blog                       controllers.frontend.FrontendController.blog
