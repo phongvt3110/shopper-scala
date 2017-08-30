@@ -15,4 +15,7 @@ class BackendController @Inject() (cc: ControllerComponents) (implicit ec: Execu
   def widgets = Action {
     Ok(views.html.backend.pages.widgets())
   }
+  def calendar = Action {
+    Ok(views.html.backend.pages.calendar())
+  }
 }
