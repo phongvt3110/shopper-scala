@@ -3,7 +3,7 @@
 # ~~~~
 
 # Home page
-GET     /listperson                           controllers.PersonController.index
+GET     /listperson                           controllers.PersonController.listperson
 
 #+nocsrf
 POST    /person                     controllers.PersonController.addPerson
@@ -13,23 +13,24 @@ GET     /persons                    controllers.PersonController.getPersons
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
 #backend
-GET     /backend                    controllers.backend.BackendController.index
-GET     /backend/dashboard2                    controllers.backend.BackendController.dashboard2
-GET     /backend/pages/widgets                    controllers.backend.BackendController.widgets
-GET     /backend/pages/calendar                    controllers.backend.BackendController.calendar
-GET     /backend/pages/charts/chartjs                    controllers.backend.pages.ChartController.chartjs
-GET     /backend/pages/charts/flot                    controllers.backend.pages.ChartController.flot
-GET     /backend/pages/charts/inline                    controllers.backend.pages.ChartController.inline
-GET     /backend/pages/charts/morris                    controllers.backend.pages.ChartController.morris
+GET     /backend                                            controllers.backend.BackendController.index
+GET     /backend/dashboard2                                 controllers.backend.BackendController.dashboard2
+GET     /backend/pages/widgets                              controllers.backend.BackendController.widgets
+GET     /backend/pages/calendar                             controllers.backend.BackendController.calendar
+GET     /backend/pages/charts/chartjs                       controllers.backend.pages.ChartController.chartjs
+GET     /backend/pages/charts/flot                          controllers.backend.pages.ChartController.flot
+GET     /backend/pages/charts/inline                        controllers.backend.pages.ChartController.inline
+GET     /backend/pages/charts/morris                        controllers.backend.pages.ChartController.morris
 
 #frontend
-GET     /                           controllers.frontend.FrontendController.index
-GET     /error404                   controllers.frontend.FrontendController.error404
-GET     /blog                       controllers.frontend.FrontendController.blog
-GET     /blog-single                       controllers.frontend.FrontendController.blog_single
-GET     /cart                       controllers.frontend.FrontendController.cart
-GET     /checkout                       controllers.frontend.FrontendController.checkout
-GET     /contact-us                       controllers.frontend.FrontendController.contact_us
-GET     /login                       controllers.frontend.FrontendController.login
-GET     /product-details                       controllers.frontend.FrontendController.product_details
-GET     /shop                       controllers.frontend.FrontendController.shop
+GET     /                                                   controllers.frontend.FrontendController.index
+GET     /home                                               controllers.frontend.FrontendController.home
+GET     /error404                                           controllers.frontend.FrontendController.error404
+GET     /blog                                               controllers.frontend.FrontendController.blog
+GET     /blog-single                                        controllers.frontend.FrontendController.blog_single
+GET     /cart                                               controllers.frontend.FrontendController.cart
+GET     /checkout                                           controllers.frontend.FrontendController.checkout
+GET     /contact-us                                         controllers.frontend.FrontendController.contact_us
+GET     /login                                              controllers.frontend.FrontendController.login
+GET     /product-details                                    controllers.frontend.FrontendController.product_details
+GET     /shop                                               controllers.frontend.FrontendController.shop

@@ -14,7 +14,7 @@ class IntegrationSpec extends Specification {
       route(app, FakeRequest(GET, "/boum")) must beSome.which (status(_) == NOT_FOUND)
     }
 
-    "render the index page" in new WithApplication {
+    "render the listperson page" in new WithApplication {
       val home = route(app, FakeRequest(GET, "/")).get
 
       status(home) must equalTo(OK)

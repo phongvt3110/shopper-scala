@@ -36,4 +36,7 @@ class FrontendController @Inject() (cc: ControllerComponents) (implicit ec: Exec
   def shop = Action {
     Ok(views.html.frontend.shop())
   }
+  def home = Action {
+    Ok(views.html.frontend.home())
+  }
 }

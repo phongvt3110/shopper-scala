@@ -28,10 +28,10 @@ class PersonController @Inject()(repo: PersonRepository,
   }
 
   /**
-   * The index action.
+   * The listperson action.
    */
-  def index = Action { implicit request =>
-    Ok(views.html.index(personForm))
+  def listperson = Action { implicit request =>
+    Ok(views.html.listperson(personForm))
   }
 
   /**
@@ -42,17 +42,17 @@ class PersonController @Inject()(repo: PersonRepository,
   def addPerson = Action.async { implicit request =>
     // Bind the form first, then fold the result, passing a function to handle errors, and a function to handle succes.
     personForm.bindFromRequest.fold(
-      // The error function. We return the index page with the error form, which will render the errors.
+      // The error function. We return the listperson page with the error form, which will render the errors.
       // We also wrap the result in a successful future, since this action is synchronous, but we're required to return
       // a future because the person creation function returns a future.
       errorForm => {
-        Future.successful(Ok(views.html.index(errorForm)))
+        Future.successful(Ok(views.html.listperson(errorForm)))
       },
       // There were no errors in the from, so create the person.
       person => {
         repo.create(person.name, person.age).map { _ =>
-          // If successful, we simply redirect to the index page.
-          Redirect(routes.PersonController.index)
+          // If successful, we simply redirect to the listperson page.
+          Redirect(routes.PersonController.listperson)
         }
       }
     )
