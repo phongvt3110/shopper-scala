@@ -1,7 +1,5 @@
-@import layout._
-@import contents._
-@main( title = "Home | E-Shopper") {
-	@header()
-	@section()
-	@footer()
+@views.html.frontend.layout.main( title = "Home | E-Shopper") {
+	@views.html.frontend.layout.header()
+	@views.html.frontend.contents.section()
+	@views.html.frontend.layout.footer()
 }
