@@ -39,4 +39,7 @@ class FrontendController @Inject() (cc: ControllerComponents) (implicit ec: Exec
   def home = Action {
     Ok(views.html.frontend.home())
   }
+  def echo = Action { request =>
+    Ok("Got request:[" + request + "]" )
+  }
 }

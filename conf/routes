@@ -34,3 +34,4 @@ GET     /contact-us                                         controllers.frontend
 GET     /login                                              controllers.frontend.FrontendController.login
 GET     /product-details                                    controllers.frontend.FrontendController.product_details
 GET     /shop                                               controllers.frontend.FrontendController.shop
+GET     /echo                                               controllers.frontend.FrontendController.echo
